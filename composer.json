@@ -1,0 +1,23 @@
+{
+    "name": "SimpleMVC",
+    "description": "Simple MVC framework",
+    "keywords": ["php", "mvc", "framework"],
+    "homepage": "https://github.com/tamplier0608/SimpleMVC/",
+    "type": "library",
+    "license": "GPLV2",
+    "authors": [
+        {
+            "name": "Serhii Kukunin",
+            "email": "kukunin.sergey@gmail.com"
+        }
+    ],
+    "version": "1.0",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}
