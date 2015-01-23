@@ -61,8 +61,8 @@ class Core_Application
         /**
          * init session
          */
-        //$session = new Zend_Session_Namespace( 'Application', true );
-        //Zend_Registry::set( 'session', $session );
+        $session = new Zend_Session_Namespace( 'Application', true );
+        Zend_Registry::set( 'session', $session );
 
         /**
          * init database adapter
