@@ -19,10 +19,6 @@
  * @version    $Id: Array.php 23775 2011-03-01 17:25:24Z ralph $
  */
 
-/**
- * @see Zend_Config_Writer
- */
-require_once 'Zend/Config/Writer/FileAbstract.php';
 
 /**
  * @category   Zend

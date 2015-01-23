@@ -20,16 +20,6 @@
  */
 
 /**
- * @see Zend_Config
- */
-require_once 'Zend/Config.php';
-
-/**
- * @see Zend_Json
- */
-require_once 'Zend/Json.php';
-
-/**
  * JSON Adapter for Zend_Config
  *
  * @category  Zend
@@ -82,7 +72,6 @@ class Zend_Config_Json extends Zend_Config
     public function __construct($json, $section = null, $options = false)
     {
         if (empty($json)) {
-            require_once 'Zend/Config/Exception.php';
             throw new Zend_Config_Exception('Filename is not set');
         }
 
@@ -118,7 +107,6 @@ class Zend_Config_Json extends Zend_Config
 
         // Check if there was a error while loading file
         if ($this->_loadFileErrorStr !== null) {
-            require_once 'Zend/Config/Exception.php';
             throw new Zend_Config_Exception($this->_loadFileErrorStr);
         }
 
@@ -132,7 +120,6 @@ class Zend_Config_Json extends Zend_Config
 
         if (null === $config) {
             // decode failed
-            require_once 'Zend/Config/Exception.php';
             throw new Zend_Config_Exception("Error parsing JSON data");
         }
 
@@ -147,7 +134,6 @@ class Zend_Config_Json extends Zend_Config
             $dataArray = array();
             foreach ($section as $sectionName) {
                 if (!isset($config[$sectionName])) {
-                    require_once 'Zend/Config/Exception.php';
                     throw new Zend_Config_Exception(sprintf('Section "%s" cannot be found', $sectionName));
                 }
 
@@ -157,7 +143,6 @@ class Zend_Config_Json extends Zend_Config
             parent::__construct($dataArray, $allowModifications);
         } else {
             if (!isset($config[$section])) {
-                require_once 'Zend/Config/Exception.php';
                 throw new Zend_Config_Exception(sprintf('Section "%s" cannot be found', $section));
             }
 
@@ -186,7 +171,6 @@ class Zend_Config_Json extends Zend_Config
     protected function _processExtends(array $data, $section, array $config = array())
     {
         if (!isset($data[$section])) {
-            require_once 'Zend/Config/Exception.php';
             throw new Zend_Config_Exception(sprintf('Section "%s" cannot be found', $section));
         }
 
@@ -194,7 +178,6 @@ class Zend_Config_Json extends Zend_Config
 
         if (is_array($thisSection) && isset($thisSection[self::EXTENDS_NAME])) {
             if (is_array($thisSection[self::EXTENDS_NAME])) {
-                require_once 'Zend/Config/Exception.php';
                 throw new Zend_Config_Exception('Invalid extends clause: must be a string; array received');
             }
             $this->_assertValidExtend($section, $thisSection[self::EXTENDS_NAME]);

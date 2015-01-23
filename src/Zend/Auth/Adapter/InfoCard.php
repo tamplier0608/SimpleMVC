@@ -20,20 +20,6 @@
  * @version    $Id: InfoCard.php 23775 2011-03-01 17:25:24Z ralph $
  */
 
-/**
- * @see Zend_Auth_Adapter_Interface
- */
-require_once 'Zend/Auth/Adapter/Interface.php';
-
-/**
- * @see Zend_Auth_Result
- */
-require_once 'Zend/Auth/Result.php';
-
-/**
- * @see Zend_InfoCard
- */
-require_once 'Zend/InfoCard.php';
 
 /**
  * A Zend_Auth Authentication Adapter allowing the use of Information Cards as an

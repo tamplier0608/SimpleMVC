@@ -20,14 +20,6 @@
  * @version    $Id: Firebug.php 23775 2011-03-01 17:25:24Z ralph $
  */
 
-/** Zend_Db_Profiler */
-require_once 'Zend/Db/Profiler.php';
-
-/** Zend_Wildfire_Plugin_FirePhp */
-require_once 'Zend/Wildfire/Plugin/FirePhp.php';
-
-/** Zend_Wildfire_Plugin_FirePhp_TableMessage */
-require_once 'Zend/Wildfire/Plugin/FirePhp/TableMessage.php';
 
 /**
  * Writes DB events as log messages to the Firebug Console via FirePHP.

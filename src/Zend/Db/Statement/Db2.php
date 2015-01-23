@@ -20,10 +20,6 @@
  * @version    $Id: Db2.php 23775 2011-03-01 17:25:24Z ralph $
  */
 
-/**
- * @see Zend_Db_Statement
- */
-require_once 'Zend/Db/Statement.php';
 
 /**
  * Extends for DB2 native adapter.
@@ -62,10 +58,6 @@ class Zend_Db_Statement_Db2 extends Zend_Db_Statement
         $this->_stmt = @db2_prepare($connection, $sql);
 
         if (!$this->_stmt) {
-            /**
-             * @see Zend_Db_Statement_Db2_Exception
-             */
-            require_once 'Zend/Db/Statement/Db2/Exception.php';
             throw new Zend_Db_Statement_Db2_Exception(
                 db2_stmt_errormsg(),
                 db2_stmt_error()
@@ -97,10 +89,6 @@ class Zend_Db_Statement_Db2 extends Zend_Db_Statement
         }
 
         if (!db2_bind_param($this->_stmt, $position, "variable", $type, $datatype)) {
-            /**
-             * @see Zend_Db_Statement_Db2_Exception
-             */
-            require_once 'Zend/Db/Statement/Db2/Exception.php';
             throw new Zend_Db_Statement_Db2_Exception(
                 db2_stmt_errormsg(),
                 db2_stmt_error()
@@ -205,10 +193,6 @@ class Zend_Db_Statement_Db2 extends Zend_Db_Statement
         }
 
         if ($retval === false) {
-            /**
-             * @see Zend_Db_Statement_Db2_Exception
-             */
-            require_once 'Zend/Db/Statement/Db2/Exception.php';
             throw new Zend_Db_Statement_Db2_Exception(
                 db2_stmt_errormsg(),
                 db2_stmt_error()
@@ -270,10 +254,6 @@ class Zend_Db_Statement_Db2 extends Zend_Db_Statement
                 }
                 break;
             default:
-                /**
-                 * @see Zend_Db_Statement_Db2_Exception
-                 */
-                require_once 'Zend/Db/Statement/Db2/Exception.php';
                 throw new Zend_Db_Statement_Db2_Exception("Invalid fetch mode '$style' specified");
                 break;
         }
@@ -304,10 +284,6 @@ class Zend_Db_Statement_Db2 extends Zend_Db_Statement
      */
     public function nextRowset()
     {
-        /**
-         * @see Zend_Db_Statement_Db2_Exception
-         */
-        require_once 'Zend/Db/Statement/Db2/Exception.php';
         throw new Zend_Db_Statement_Db2_Exception(__FUNCTION__ . '() is not implemented');
     }
 

@@ -20,10 +20,7 @@
  * @version    $Id: Exception.php 23775 2011-03-01 17:25:24Z ralph $
  */
 
-/**
- * @see Zend_Db_Exception
- */
-require_once 'Zend/Db/Exception.php';
+
 
 /**
  * Zend_Db_Statement_Exception

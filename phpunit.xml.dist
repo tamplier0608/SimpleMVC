@@ -3,7 +3,11 @@
 <phpunit bootstrap="./bootstrap.php" colors="true">
     <testsuites>
         <testsuite name="FrameworkTestSuite">
-            <directory>tests/Core</directory>
+            <file>./tests/Core/ViewTest.php</file>
+            <file>./tests/Core/RequestTest.php</file>
+            <file>./tests/Core/RouterTest.php</file>
+            <file>./tests/Core/ActionAbstractTest.php</file>
+            <file>./tests/Core/ApplicationTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>

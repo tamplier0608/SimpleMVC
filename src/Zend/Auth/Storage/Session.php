@@ -22,18 +22,6 @@
 
 
 /**
- * @see Zend_Auth_Storage_Interface
- */
-require_once 'Zend/Auth/Storage/Interface.php';
-
-
-/**
- * @see Zend_Session
- */
-require_once 'Zend/Session.php';
-
-
-/**
  * @category   Zend
  * @package    Zend_Auth
  * @subpackage Storage

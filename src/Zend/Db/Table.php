@@ -20,15 +20,6 @@
  * @version    $Id: Table.php 23775 2011-03-01 17:25:24Z ralph $
  */
 
-/**
- * @see Zend_Db_Table_Abstract
- */
-require_once 'Zend/Db/Table/Abstract.php';
-
-/**
- * @see Zend_Db_Table_Definition
- */
-require_once 'Zend/Db/Table/Definition.php';
 
 /**
  * Class for SQL table interface.

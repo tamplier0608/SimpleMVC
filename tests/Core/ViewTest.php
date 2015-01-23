@@ -8,7 +8,7 @@ class ViewTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->view = new Core_View();
-        $this->config = new Zend_Config_Ini(realpath(__DIR__ . '/../fixtures/application.ini'));;
+        $this->config = new Zend_Config_Ini(realpath(__DIR__ . '/../fixtures/application.ini'));
     }
 
     /**
@@ -30,6 +30,7 @@ class ViewTest extends PHPUnit_Framework_TestCase
         $view = 'view.phtml';
         $result = $this->view->setViewScript($view);
         $this->assertInstanceOf('Core_View', $result);
+        var_dump($this->view);
 
         $viewScript = $this->getPrivatePropertyValue('_viewScript', $this->view);
         $this->assertEquals($view, $viewScript);
@@ -43,9 +44,13 @@ class ViewTest extends PHPUnit_Framework_TestCase
      */
     public function testGetViewScript($viewScript)
     {
+        var_dump($this->view);
+
         $script = $this->view->getViewScript();
 
         $this->assertEquals($viewScript, $script);
+
+        die;
     }
 
     /**

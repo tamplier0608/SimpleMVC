@@ -20,10 +20,6 @@
  * @version    $Id: Ibm.php 23775 2011-03-01 17:25:24Z ralph $
  */
 
-/**
- * @see Zend_Db_Statement_Pdo
- */
-require_once 'Zend/Db/Statement/Pdo.php';
 
 /**
  * Proxy class to wrap a PDOStatement object for IBM Databases.
@@ -86,7 +82,6 @@ class Zend_Db_Statement_Pdo_Ibm extends Zend_Db_Statement_Pdo
                 return $this->_stmt->bindParam($parameter, $variable, $type, $length, $options);
             }
         } catch (PDOException $e) {
-            require_once 'Zend/Db/Statement/Exception.php';
             throw new Zend_Db_Statement_Exception($e->getMessage(), $e->getCode(), $e);
         }
     }

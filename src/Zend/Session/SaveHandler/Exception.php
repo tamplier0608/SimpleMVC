@@ -20,10 +20,6 @@
  * @version    $Id: Exception.php 23775 2011-03-01 17:25:24Z ralph $
  */
 
-/**
- * @see Zend_Session_Exception
- */
-require_once 'Zend/Session/Exception.php';
 
 /**
  * Zend_Session_SaveHandler_Exception

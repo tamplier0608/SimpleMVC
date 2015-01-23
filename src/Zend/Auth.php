@@ -86,10 +86,6 @@ class Zend_Auth
     public function getStorage()
     {
         if (null === $this->_storage) {
-            /**
-             * @see Zend_Auth_Storage_Session
-             */
-            require_once 'Zend/Auth/Storage/Session.php';
             $this->setStorage(new Zend_Auth_Storage_Session());
         }
 

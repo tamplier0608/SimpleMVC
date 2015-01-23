@@ -19,15 +19,6 @@
  * @version    $Id: Json.php 23294 2010-11-05 00:27:34Z ramon $
  */
 
-/**
- * @see Zend_Config_Writer
- */
-require_once 'Zend/Config/Writer/FileAbstract.php';
-
-/**
- * @see Zend_Config_Json
- */
-require_once 'Zend/Config/Json.php';
 
 /**
  * @category   Zend

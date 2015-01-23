@@ -22,12 +22,6 @@
 
 
 /**
- * @see Zend_Auth_Storage_Interface
- */
-require_once 'Zend/Auth/Storage/Interface.php';
-
-
-/**
  * Non-Persistent Auth Storage
  *
  * Since HTTP Authentication happens again on each request, this will always be

@@ -20,10 +20,6 @@
  * @version    $Id: Exception.php 23775 2011-03-01 17:25:24Z ralph $
  */
 
-/**
- * Zend_Db_Adapter_Exception
- */
-require_once 'Zend/Db/Adapter/Exception.php';
 
 /**
  * Zend_Db_Adapter_Oracle_Exception

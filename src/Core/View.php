@@ -104,7 +104,7 @@ class Core_View implements ITemplate
      * @access public
      * @return string
      */
-    public function getViewScript($viewScript)
+    public function getViewScript()
     {
         return $this->_viewScript;
     }
@@ -126,7 +126,7 @@ class Core_View implements ITemplate
      * @access public
      * @return string
      */
-    public function getLayoutScript($layoutScript)
+    public function getLayoutScript()
     {
         return $this->_layoutScript;
     }
