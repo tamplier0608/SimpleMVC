@@ -165,7 +165,7 @@ class Core_Application
         $actionPath = realpath($this->getConfig()->action->path . $actionFile);
 
         if (!file_exists($actionPath)) {
-            throw new Exception('Action file "' . $actionPath . '" does not exist!');
+            throw new Exception('Action file "' . $actionFile . '" does not exist!');
         }
         require_once $actionPath;
 
