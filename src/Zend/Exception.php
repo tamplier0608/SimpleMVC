@@ -30,7 +30,7 @@ class Zend_Exception extends Exception
     /**
      * @var null|Exception
      */
-    private $_previous = null;
+    protected $_previous = null;
 
     /**
      * Construct the exception

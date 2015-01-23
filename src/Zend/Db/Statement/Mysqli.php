@@ -64,10 +64,6 @@ class Zend_Db_Statement_Mysqli extends Zend_Db_Statement
         $this->_stmt = $mysqli->prepare($sql);
 
         if ($this->_stmt === false || $mysqli->errno) {
-            /**
-             * @see Zend_Db_Statement_Mysqli_Exception
-             */
-            require_once 'Zend/Db/Statement/Mysqli/Exception.php';
             throw new Zend_Db_Statement_Mysqli_Exception("Mysqli prepare error: " . $mysqli->error, $mysqli->errno);
         }
     }
@@ -201,10 +197,6 @@ class Zend_Db_Statement_Mysqli extends Zend_Db_Statement
         // execute the statement
         $retval = $this->_stmt->execute();
         if ($retval === false) {
-            /**
-             * @see Zend_Db_Statement_Mysqli_Exception
-             */
-            require_once 'Zend/Db/Statement/Mysqli/Exception.php';
             throw new Zend_Db_Statement_Mysqli_Exception(
                 "Mysqli statement execute error : " . $this->_stmt->error,
                 $this->_stmt->errno

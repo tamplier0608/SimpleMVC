@@ -22,12 +22,6 @@
 
 
 /**
- * @see Zend_Db_Exception
- */
-require_once 'Zend/Db/Exception.php';
-
-
-/**
  * @category   Zend
  * @package    Zend_Db
  * @subpackage Profiler
