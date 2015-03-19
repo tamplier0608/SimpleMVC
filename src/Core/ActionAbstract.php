@@ -50,7 +50,7 @@ abstract class Core_ActionAbstract
      * @access public
      * @todo Need to implement in children class
      */
-    abstract public function proceed();
+    abstract public function process();
 
     /**
      * Get option by the key
