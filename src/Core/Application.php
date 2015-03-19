@@ -203,7 +203,7 @@ class Core_Application
         $actionObject->init();
 
         // proceed action
-        $actionObject->proceed();
+        $actionObject->process();
 
         // render view script and layout
         $actionObject->renderView();
