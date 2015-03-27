@@ -50,8 +50,7 @@ class Core_Router
     }
 
     /**
-     * @TODO рефакторинг
-     * @return type
+     * @return array
      */
     public function process()
     {
@@ -63,17 +62,14 @@ class Core_Router
         $this->_request->setParam('action', $action);
 
         $params = array();
-        if (!empty($requestURI[1])) {
-            $params = explode('&', $requestURI[1]);
+
+        parse_str($requestURI[1], $params);
+
+        foreach($params as $key => $value) {
+            $this->_request->setParam($key, $value);
         }
 
-        for ($i = 0; $i < count($params); $i++) {
-            if (isset($params[$i + 1])) {
-                $this->_request->setParam($params[$i], $params[$i + 1]);
-            }
-        }
-
-        return array_merge(array($action), $params);
+        return $this->_request->getParams();
     }
 
     /**
